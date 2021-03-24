@@ -5,6 +5,7 @@ using System.Threading;
 
 public class Magic : MonoBehaviour
 {
+    public HUDDisplay mana;
 
     public void ActiveMagie(GameObject magictag, PlayerController player)
     {
@@ -15,6 +16,7 @@ public class Magic : MonoBehaviour
             GameObject pointarrive = magictag.transform.GetChild(2).gameObject;
             if(pont.CompareTag("PontPDL"))
             {
+                mana.Changer_mana(-1);
                 pont.SetActive(true);
                 pont.transform.parent = GameObject.Find("Sorts").transform;
                 pointarrive.transform.parent = GameObject.Find("Sorts").transform;

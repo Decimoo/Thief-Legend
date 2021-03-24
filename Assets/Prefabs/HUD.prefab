@@ -28,14 +28,14 @@ RectTransform:
   m_GameObject: {fileID: 5685650745376650829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.35629028, y: 0.803464, z: 3.0750513}
+  m_LocalScale: {x: 0.35629028, y: 0.111311905, z: 3.0750513}
   m_Children: []
   m_Father: {fileID: 5685650746496285440}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -221, y: -1}
+  m_AnchoredPosition: {x: 22, y: -261}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5685650745376650824
@@ -208,6 +208,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventairescreen: {fileID: 5685650745376650825}
   messagePanel: {fileID: 5685650746334338319}
+  fleur: {fileID: 0}
+  player: {fileID: 0}
+  LevelName: {fileID: 0}
 --- !u!1001 &5685650745291424273
 PrefabInstance:
   m_ObjectHideFlags: 0

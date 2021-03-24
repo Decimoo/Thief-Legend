@@ -12,6 +12,9 @@ TagManager:
   - Sol
   - Sort
   - Gagne
+  - ennemi
+  - personnage
+  - MapCamera
   layers:
   - Default
   - TransparentFX

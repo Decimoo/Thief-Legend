@@ -46,9 +46,9 @@ public class InventaireScreen : MonoBehaviour
             }
             else
             {
-                var obj = Instantiate(inventaire.Container[i].item.prefab, Vector3.zero, Quaternion.Euler (45f, 0f, 0f) , transform);
+                var obj = Instantiate(inventaire.Container[i].item.prefab, Vector3.zero, Quaternion.identity , transform);
                 obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                Debug.Log(obj.transform.position);
+                Debug.Log(GetPosition(i));
                 obj.GetComponentInChildren<TextMeshProUGUI>().text = inventaire.Container[i].amount.ToString("n0");
                 itemsDisplayed.Add(inventaire.Container[i], obj);           
             }

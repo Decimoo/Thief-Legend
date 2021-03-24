@@ -9,9 +9,14 @@ public class PlayerController : MonoBehaviour
     public HUDDisplay huddisplay;
     public Magic sort;
     public int mana;
+    public bool bouger;
+    public Play play;
+
+    public Sauvegarde sav;
     void Awake()
     {
-        mana = 10;
+        mana = 9;
+        bouger = false;
     }
 
     // Update is called once per frame
@@ -29,6 +34,7 @@ public class PlayerController : MonoBehaviour
             {
                 pos.z += 1;
                 transform.position = pos;
+                bouger = true;
             }
         }
 
@@ -39,6 +45,7 @@ public class PlayerController : MonoBehaviour
             {
                 pos.z -= 1;
                 transform.position = pos;
+                bouger = true;
             }
 
         }
@@ -50,6 +57,7 @@ public class PlayerController : MonoBehaviour
             {
                 pos.x += 1;
                 transform.position = pos;
+                bouger = true;
             }
 
         }
@@ -61,11 +69,19 @@ public class PlayerController : MonoBehaviour
             {
                 pos.x -= 1;
                 transform.position = pos;
+                bouger = true;
             }
 
         }
 
         KeyBindings();
+
+        if(bouger)
+        {
+            play.bloque = true;
+            bouger = false;
+            return;
+        }
     }
 
     void KeyBindings()
@@ -80,6 +96,10 @@ public class PlayerController : MonoBehaviour
             {
                 huddisplay.inventairescreen.OpenInventory();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            sav.fun1();
         }
 
     }
@@ -100,6 +120,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+       /* if(other.gameObject.CompareTag("Perdu"))
+        {
+            SceneManager.LoadScene("game-over");
+        }*/
+        
+        if(other.gameObject.CompareTag("Gagne"))
+        {
+            SceneManager.LoadScene("victoire");
+        }  
+    }
     void OnTriggerStay(Collider other)
     {
         if(other.gameObject.CompareTag("Item"))
@@ -129,11 +161,7 @@ public class PlayerController : MonoBehaviour
                 huddisplay.messagePanel.CloseMessagePanel();
             }
         }
-        
-        else if(other.gameObject.CompareTag("Gagne"))
-        {
-            SceneManager.LoadScene("game-over");
-        }          
+                 
     }
     void OnTriggerExit(Collider other)
     {

@@ -8,6 +8,10 @@ public class Play : MonoBehaviour
     public List<GameObject> ennemies;
     public Enemy ennemi;
     public int nbTour;
+    public int nbPlayers;
+    public bool bloque;
+    public Chargement chargement;
+    public HUDDisplay HUD;
 
 
     void Awake()
@@ -22,21 +26,37 @@ public class Play : MonoBehaviour
     {
         nbTour = 1;
         ennemies = new List<GameObject>(GameObject.FindGameObjectsWithTag("Ennemi"));
+        nbPlayers = ennemies.Count + 1;
+        bloque = false;
+        if (PlayerPrefs.GetInt("charger-le-reste") == 1)
+        {
+            chargement.CHARGEMENT();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        player.Movement();
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(bloque == false)
         {
+            player.Movement();
             for(int i = 0; i < ennemies.Count; i++)
             {
                 ennemi = ennemies[i].GetComponent<Enemy>();
+                ennemi.GetComponent<Enemy>().enabled = false;
+            }
+        }
+        else if (bloque == true)
+        {
+            for(int i = 0; i < ennemies.Count; i++)
+            {
+                ennemi.GetComponent<Enemy>().enabled = true;
+                ennemi = ennemies[i].GetComponent<Enemy>();
                 ennemi.EnnemiDeplacement();
             }
+            bloque = false;
             nbTour++;
-            Debug.Log(nbTour);
+            HUD.Tours.text = "Tour n°"+ nbTour;
         }
     }
 
