@@ -2648,6 +2648,10 @@ MonoBehaviour:
   ennemies: []
   ennemi: {fileID: 245437586}
   nbTour: 1
+  nbPlayers: 0
+  bloque: 0
+  chargement: {fileID: 0}
+  HUD: {fileID: 0}
 --- !u!4 &317129484
 Transform:
   m_ObjectHideFlags: 0
@@ -14415,7 +14419,7 @@ PrefabInstance:
     - target: {fileID: 3769646364489041689, guid: b0ef9df4c1423bb42959fbe22893765f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.43
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 3769646364489041689, guid: b0ef9df4c1423bb42959fbe22893765f,
         type: 3}
