@@ -16,5 +16,3 @@ public class Mana_image : MonoBehaviour
         }
     }
 }
-
-// scritp utilisé pour gérer les photos de la fleur mais tu as le tiens donc ignore le

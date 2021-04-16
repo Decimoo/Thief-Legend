@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - Mana_image
     - MenuGameOver
     - MenuPrincipal
+    - Menulvl
     - MessagePanel
     - Objet
     - PauseMenu
@@ -83,6 +84,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -124,21 +129,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13548}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13802}
+      Script: {instanceID: 13804}
     - Class: 114
-      Script: {instanceID: 13866}
+      Script: {instanceID: 13868}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,15 +220,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13402}
+      Script: {instanceID: 13404}
     - Class: 114
-      Script: {instanceID: 13408}
+      Script: {instanceID: 13410}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13674}
+      Script: {instanceID: 13676}
     - Class: 114
-      Script: {instanceID: 13866}
+      Script: {instanceID: 13868}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -278,9 +283,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12834}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -345,17 +350,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13318}
     - Class: 114
-      Script: {instanceID: 13730}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13998}
+      Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14000}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 14020}
     - Class: 114
-      Script: {instanceID: 14056}
+      Script: {instanceID: 14038}
+    - Class: 114
+      Script: {instanceID: 14058}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -402,11 +409,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12834}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13916}
+      Script: {instanceID: 13918}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14020}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -498,7 +505,7 @@ ScriptsOnlyBuild:
     className: ArmModel
   - hash:
       serializedVersion: 2
-      Hash: 741cf64504adf7bc6319e1916f616a58
+      Hash: 5182c0977bafa9509224aa553ee15801
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Play
@@ -708,7 +715,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: e846788f87277b17168d57bccdc1a2a1
+      Hash: 28febeaea57c85ad6c5f3dfb4c103f4a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuPrincipal
@@ -900,7 +907,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: ded40ca688868e0f78f16b0063fd600b
+      Hash: fce3d41f82a079cbababc176acdc1dc9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventaireScreen
@@ -910,6 +917,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Detection
+  - hash:
+      serializedVersion: 2
+      Hash: 271eb7201682d5991c011f0c03448b44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Menulvl
   - hash:
       serializedVersion: 2
       Hash: 24c74cc0d527a06113f2b967042769f0
@@ -930,7 +943,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: 67b149632c1fc81bf6923d6953104a8a
+      Hash: 7c2b9ede55866675e473974c82efe116
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1008,7 +1021,7 @@ ScriptsOnlyBuild:
     className: NetworkAnimator
   - hash:
       serializedVersion: 2
-      Hash: 411dae295127b5547df9158ad3ae15a8
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Sauvegarde
@@ -1145,4 +1158,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/game-over.unity
   - Assets/Scenes/Niveau1-1.unity
   - Assets/Scenes/victoire.unity
-  playerPath: C:/Users/chaud/Desktop/tset/Test.exe
+  playerPath: C:/Users/babouin/Desktop/Thief-Legend-master/build/Test.exe

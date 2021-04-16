@@ -1,7 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Threading;
 
 public class Magic : MonoBehaviour
 {
@@ -9,7 +7,7 @@ public class Magic : MonoBehaviour
 
     public void ActiveMagie(GameObject magictag, PlayerController player)
     {
-        if(magictag.name == "PDL")
+        if(magictag.name == "PDL" && player.mana > 0)
         {   
             GameObject pont = magictag.transform.GetChild(0).gameObject;
             GameObject mur = magictag.transform.GetChild(1).gameObject;
@@ -19,7 +17,6 @@ public class Magic : MonoBehaviour
                 mana.Changer_mana(-1);
                 pont.SetActive(true);
                 pont.transform.parent = GameObject.Find("Sorts").transform;
-                pointarrive.transform.parent = GameObject.Find("Sorts").transform;
                 Destroy(mur);
                 StartCoroutine(Climb(player,pointarrive));
             }

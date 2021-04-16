@@ -12,7 +12,9 @@ public class MenuPrincipal : MonoBehaviour {
     Resolution[] resolutions; //tableau des resolutions
     public Dropdown resolutionDropdown; //fait la liaison avec la resolution du jeu
     private void Start () {
+
         PlayerPrefs.SetInt ("charger-le-reste", 0);
+        
         //met toutes les resolutions disponibles en fonction de l'écran ou il est lancé dans un tableau
         resolutions = Screen.resolutions.Select (resolution => new Resolution { width = resolution.width, height = resolution.height }).Distinct ().ToArray ();
 
@@ -54,8 +56,11 @@ public class MenuPrincipal : MonoBehaviour {
     //
     //
     //
+        public Canvas menulvl;
     public void StartGame () {
-        SceneManager.LoadScene (1 /*levelToLoad*/ );
+
+        menulvl.gameObject.SetActive (true);
+        this.gameObject.SetActive (false);
     }
 
     public void OptionsGame () {

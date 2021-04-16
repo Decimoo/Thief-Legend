@@ -36,6 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Chargement.cs" />
      <Compile Include="Assets\Scripts\DefaultObjet.cs" />
      <Compile Include="Assets\Scripts\Detection.cs" />
@@ -47,6 +48,7 @@
      <Compile Include="Assets\Scripts\Mana_image.cs" />
      <Compile Include="Assets\Scripts\MenuGameOver.cs" />
      <Compile Include="Assets\Scripts\MenuPrincipal.cs" />
+     <Compile Include="Assets\Scripts\Menulvl.cs" />
      <Compile Include="Assets\Scripts\MessagePanel.cs" />
      <Compile Include="Assets\Scripts\Objet.cs" />
      <Compile Include="Assets\Scripts\ObjetType.cs" />
@@ -71,7 +73,6 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\sauvegarde.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
