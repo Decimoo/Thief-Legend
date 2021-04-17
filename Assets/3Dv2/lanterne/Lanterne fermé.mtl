@@ -1,0 +1,23 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.128981410)
+
+newmtl parties_principales
+kd 0.174 0.174 0.174
+illum 1
+
+newmtl montants
+kd 0 0 0
+illum 1
+
+newmtl porte
+kd 0.234 0.5 0.34654
+illum 1
+
+newmtl anneu
+kd 1 1 1
+illum 1
+
+newmtl vitre
+kd 0.410004 0.5 0.032
+illum 1
+

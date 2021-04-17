@@ -15,6 +15,7 @@ TagManager:
   - ennemi
   - personnage
   - MapCamera
+  - Monter
   layers:
   - Default
   - TransparentFX

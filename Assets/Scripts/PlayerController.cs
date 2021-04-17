@@ -28,7 +28,8 @@ public class PlayerController : MonoBehaviour {
 
     }
 
-    public void FixedUpdate () { }
+    public void FixedUpdate () {
+    }
 
     public void Movement () {
         Vector3 pos = transform.position;
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour {
             Vector3 direction = new Vector3 (transform.rotation.eulerAngles.x, 0, transform.rotation.eulerAngles.z);
             StartCoroutine (Tourne (direction, 1));
             if (DetectCollision ()) {
-                pos.z += 1;
+                pos.z += 6;
                 transform.position = pos;
                 bouger = true;
             }
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour {
             Vector3 direction = new Vector3 (transform.rotation.eulerAngles.x, -180, transform.rotation.eulerAngles.z);
             StartCoroutine (Tourne (direction, 2));
             if (DetectCollision ()) {
-                pos.z -= 1;
+                pos.z -= 6;
                 transform.position = pos;
                 bouger = true;
             }
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour {
             Vector3 direction = new Vector3 (transform.rotation.eulerAngles.x, 90, transform.rotation.eulerAngles.z);
             StartCoroutine (Tourne (direction, 3));
             if (DetectCollision ()) {
-                pos.x += 1;
+                pos.x += 6;
                 transform.position = pos;
                 bouger = true;
             }
@@ -65,7 +66,7 @@ public class PlayerController : MonoBehaviour {
             Vector3 direction = new Vector3 (transform.rotation.eulerAngles.x, -90, transform.rotation.eulerAngles.z);
             StartCoroutine (Tourne (direction, 4));
             if (DetectCollision ()) {
-                pos.x -= 1;
+                pos.x -= 6;
                 transform.position = pos;
                 bouger = true;
             }
@@ -152,10 +153,16 @@ public class PlayerController : MonoBehaviour {
 
     bool DetectCollision () {
 
-        Ray ray = new Ray (transform.position, transform.forward);
+        Vector3 posray = transform.position; 
+        posray.y -=10;
+        Ray ray = new Ray (posray, transform.forward);
         RaycastHit hitInfo;
 
-        if (Physics.Raycast (ray, out hitInfo, 1) && hitInfo.transform.tag == "Obstacle") { return false; }
+        if (Physics.Raycast (ray, out hitInfo, 8) && hitInfo.transform.tag == "Obstacle") 
+        {
+            Debug.Log("Touche");
+            return false; 
+        }
 
         return true;
     }
@@ -187,6 +194,14 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
+        if (other.gameObject.CompareTag ("Monter")) {
+            huddisplay.messagePanel.OpenMessagePanel (3);
+            if (Input.GetKeyDown (KeyCode.F)) {
+                StartCoroutine(Climb(other.gameObject));
+                huddisplay.messagePanel.CloseMessagePanel ();
+            }
+        }
+
     }
       public void ChangeCamera()
     {
@@ -203,6 +218,20 @@ public class PlayerController : MonoBehaviour {
             CurrentCamera--;
             cameraList[CurrentCamera].gameObject.SetActive(true);
         }
+    }
+    public IEnumerator Climb(GameObject Monte)
+    {
+        float timer = 0;
+        Vector3 startpos = transform.position;
+        enabled = false;
+        GameObject obj = Monte.transform.GetChild(0).gameObject;
+        while(timer < 3)
+        {
+            transform.position = Vector3.Lerp(startpos, obj.transform.position,timer/3);
+            timer += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        enabled = true;
     } 
     void OnTriggerExit (Collider other) { huddisplay.messagePanel.CloseMessagePanel (); }
     private void OnApplicationQuit () { inventaire.Container.Clear (); }

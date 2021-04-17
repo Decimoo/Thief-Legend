@@ -1,0 +1,39 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.128981410)
+
+newmtl Marteau
+kd 1 1 1
+illum 1
+
+newmtl table1
+kd 0.779221 0.779221 0.779221
+illum 1
+
+newmtl support_table
+kd 0.54 0 0
+illum 1
+
+newmtl lambert1
+kd 0.5 0.5 0.5
+illum 1
+
+newmtl Table_d_échange
+kd 0.675325 0.675325 0.675325
+illum 1
+
+newmtl Support
+kd 0.850649 0.850649 0.850649
+illum 1
+
+newmtl Drap_tente
+kd 0.266234 0.266234 0.266234
+illum 1
+
+newmtl Tapis
+kd 0.11039 0.11039 0.11039
+illum 1
+
+newmtl Caisse
+kd 0.168831 0.168831 0.168831
+illum 1
+

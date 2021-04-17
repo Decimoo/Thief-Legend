@@ -1,0 +1,35 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.243586452)
+
+newmtl Bateau
+kd 0.2071 0.0528 0.0528
+illum 1
+
+newmtl bois
+kd 0.525974 0.525974 0.525974
+illum 1
+
+newmtl bateau_Trappe_a_canon_G_bateau_bois_2
+kd 0.785714 0.785714 0.785714
+illum 1
+
+newmtl bateau_Trappe_a_canon_G_bateau_Fence
+kd 1 1 1
+illum 1
+
+newmtl bateau_Trappe_a_canon_G_bateau_sous_l_eau
+kd 0.116883 0.116883 0.116883
+illum 1
+
+newmtl bateau_Trappe_a_canon_G_bateau_canon
+kd 1 1 1
+illum 1
+
+newmtl bateau_Trappe_a_canon_G_bateau_trappe
+kd 0.305195 0.305195 0.305195
+illum 1
+
+newmtl Voiles
+kd 0 1 0
+illum 1
+

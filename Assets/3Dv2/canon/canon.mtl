@@ -1,0 +1,27 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.128981410)
+
+newmtl plaque_support_canon
+kd 0 0.423075 0.5
+illum 1
+
+newmtl train_de_roues
+kd 1 0 0
+illum 1
+
+newmtl support_canon1
+kd 0.1414 0.0333 0.0027
+illum 1
+
+newmtl lambert3
+kd 1 1 1
+illum 1
+
+newmtl cote_chariot
+kd 0.272 0.272 0.272
+illum 1
+
+newmtl roues1
+kd 0.004 0.004 0.004
+illum 1
+

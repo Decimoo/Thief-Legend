@@ -8,25 +8,25 @@ public class Enemy : MonoBehaviour
         Vector3 pos = transform.position;
         if(transform.rotation.eulerAngles.y == 0)
         {
-            pos.z += 1;
+            pos.z += 6;
             transform.position = pos;
         }
 
         else if(transform.rotation.eulerAngles.y == 90)
         {
-            pos.x += 1;
+            pos.x += 6;
             transform.position = pos;
         }
 
         else if(transform.rotation.eulerAngles.y == 180)
         {
-            pos.z -= 1;
+            pos.z -= 6;
             transform.position = pos;
         }
 
         else if(transform.rotation.eulerAngles.y == 270)
         {
-            pos.x -= 1;
+            pos.x -= 6;
             transform.position = pos;
         }
     }

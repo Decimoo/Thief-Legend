@@ -20,6 +20,10 @@ public class MessagePanel : MonoBehaviour
         {
             text.text = "Appuyez sur F pour utiliser un sort";
         }
+        if (num == 3)
+        {
+            text.text = "Appuyez sur F pour monter";
+        }
         messagePanel.SetActive(true);
         
     }
